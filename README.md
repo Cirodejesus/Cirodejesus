@@ -9,11 +9,8 @@
 
 
 ### :zap: Actividad reciente
-<!--START_SECTION:activity-->
-
-<!--END_SECTION:activity-->
-
-
+<!--RECENT_ACTIVITY:start-->
+<!--RECENT_ACTIVITY:last_update-->
 
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=Cirodejesus&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>

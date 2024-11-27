@@ -1,0 +1,35 @@
+name: Update README2
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # Cada 12 horas
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python (si utilizas un script en Python)
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install requests # o cualquier otra dependencia que necesites
+
+      - name: Run script to update README
+        run: |
+          python update_readme.py # tu script que actualiza el README.md
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git add README.md
+          git commit -m "Update README with recent activity"
+          git push
+
+
